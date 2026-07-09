@@ -684,16 +684,20 @@ box-shadow:0 15px 35px rgba(0,0,0,.35);
 .logo{
     display:flex;
     align-items:center;
-    gap:12px;
-    font-size:30px;
+    gap:14px;
+    font-size:28px;
     font-weight:700;
     color:#00d4ff;
 }
 
 .logo-icon{
-    width:48px;
-    height:48px;
+    width:60px;
+    height:60px;
     border-radius:12px;
+}
+
+.logo-icon{
+    filter: drop-shadow(0 0 8px rgba(0,212,255,.35));
 }
 
 .hero-search input{
