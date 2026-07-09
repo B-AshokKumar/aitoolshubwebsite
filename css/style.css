@@ -645,6 +645,14 @@ flex-direction:column;
 
 border-radius:22px;
 
+.news-content h3{
+    font-size:20px;
+}
+
+.news-content p{
+    font-size:16px;
+}
+
 }
 
 .hero-search button{
@@ -858,19 +866,20 @@ display:block;
     border-radius:22px;
     overflow:hidden;
     transition:.35s;
+    margin-bottom:10px;
 }
 
 .news-card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 15px 35px rgba(0,217,255,.25);
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,212,255,.35);
 }
 
 .news-image{
-    height:180px;
+    height:130px;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:70px;
+    font-size:56px;
     background:linear-gradient(135deg,#00bcd4,#7c3aed);
 }
 
