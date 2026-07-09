@@ -609,25 +609,6 @@ background:#0097a7;
 
 /* Animation */
 
-@keyframes fadeUp{
-
-from{
-
-opacity:0;
-
-transform:translateY(50px);
-
-}
-
-to{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
-
-}
 
 @keyframes float1{
 
@@ -664,18 +645,6 @@ transform:translateY(-30px);
 /* Mobile */
 
 @media(max-width:768px){
-
-.hero h1{
-
-font-size:38px;
-
-}
-
-.hero p{
-
-font-size:18px;
-
-}
 
 .hero-search{
 
@@ -856,12 +825,6 @@ display:flex;
 #menuBtn{
 
 display:block;
-
-}
-
-.logo{
-
-font-size:24px;
 
 }
 
