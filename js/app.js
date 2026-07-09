@@ -48,3 +48,37 @@ this.innerHTML="📋 Copy Prompt";
 
 });
 
+// AI Tools Filter
+
+const filterButtons = document.querySelectorAll(".filter-btn");
+const toolCards = document.querySelectorAll(".directory-card");
+
+filterButtons.forEach(button => {
+
+button.addEventListener("click", () => {
+
+filterButtons.forEach(btn => btn.classList.remove("active"));
+
+button.classList.add("active");
+
+const filter = button.dataset.filter;
+
+toolCards.forEach(card => {
+
+if(filter === "all" || card.dataset.category === filter){
+
+card.style.display = "block";
+
+}else{
+
+card.style.display = "none";
+
+}
+
+});
+
+});
+
+});
+
+
