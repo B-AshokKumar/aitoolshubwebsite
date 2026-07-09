@@ -813,15 +813,12 @@ box-shadow:0 8px 20px rgba(0,217,255,.35);
 }
 
 #menuBtn{
-
-display:none;
-
-font-size:34px;
-
-color:white;
-
-cursor:pointer;
-
+    display:none;
+    font-size:24px;      /* Smaller icon */
+    color:#ffffff;
+    cursor:pointer;
+    line-height:1;
+    padding:4px;
 }
 
 /* Mobile */
@@ -866,6 +863,19 @@ display:block;
 
 font-size:24px;
 
+}
+
+.logo{
+    font-size:22px;
+}
+
+.logo-icon{
+    width:34px;
+    height:34px;
+}
+
+#menuBtn{
+    font-size:22px;
 }
 
 }
