@@ -27,3 +27,24 @@ menuBtn.onclick=function(){
 nav.classList.toggle("show");
 
 }
+
+document.querySelectorAll(".copy-btn").forEach(button=>{
+
+button.addEventListener("click",function(){
+
+const text=this.parentElement.querySelector("p").innerText;
+
+navigator.clipboard.writeText(text);
+
+this.innerHTML="✅ Copied!";
+
+setTimeout(()=>{
+
+this.innerHTML="📋 Copy Prompt";
+
+},2000);
+
+});
+
+});
+
