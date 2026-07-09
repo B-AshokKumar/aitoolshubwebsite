@@ -489,6 +489,8 @@ justify-content:center;
 
 align-items:center;
 
+padding-top:90px;
+
 padding:40px 20px;
 
 text-align:center;
@@ -684,20 +686,17 @@ box-shadow:0 15px 35px rgba(0,0,0,.35);
 .logo{
     display:flex;
     align-items:center;
-    gap:14px;
-    font-size:28px;
+    gap:10px;
+    font-size:24px;
     font-weight:700;
     color:#00d4ff;
 }
 
 .logo-icon{
-    width:60px;
-    height:60px;
-    border-radius:12px;
-}
-
-.logo-icon{
-    filter: drop-shadow(0 0 8px rgba(0,212,255,.35));
+    width:42px;
+    height:42px;
+    object-fit:contain;
+    filter:drop-shadow(0 0 8px rgba(0,212,255,.35));
 }
 
 .hero-search input{
@@ -844,7 +843,8 @@ justify-content:space-between;
 
 align-items:center;
 
-padding:18px 6%;
+height:70px;
+padding:0 20px;
 
 background:rgba(10,15,35,.75);
 
