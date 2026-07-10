@@ -37,9 +37,15 @@ if (menuBtn && nav) {
 document.querySelectorAll(".copy-btn").forEach(button => {
     button.addEventListener("click", function () {
 
-        const text = this.parentElement.querySelector("p").innerText;
+        const prompt = this.parentElement.querySelector("p");
 
-        navigator.clipboard.writeText(text);
+if (!prompt) return;
+
+const text = prompt.innerText;
+
+        if (navigator.clipboard) {
+    navigator.clipboard.writeText(text);
+}
 
         this.innerHTML = "✅ Copied!";
 
