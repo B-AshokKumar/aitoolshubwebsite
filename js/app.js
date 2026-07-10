@@ -1,84 +1,70 @@
-document
-.getElementById("searchBtn")
-.addEventListener("click",function(){
+// Search Button
+const searchBtn = document.getElementById("searchBtn");
 
-let keyword=document
-.querySelector("input")
-.value;
+if (searchBtn) {
+    searchBtn.addEventListener("click", function () {
 
-if(keyword==""){
+        let keyword = document.querySelector(".hero-search input").value.trim();
 
-alert("Please enter AI tool name.");
+        if (keyword === "") {
+            alert("Please enter AI tool name.");
+            return;
+        }
 
-return;
-
+        alert("Searching for: " + keyword);
+    });
 }
 
-alert("Searching for: "+keyword);
+// Mobile Menu
+const menuBtn = document.getElementById("menuBtn");
+const nav = document.getElementById("navMenu");
 
-});
-
-const menuBtn=document.getElementById("menuBtn");
-
-const nav=document.getElementById("navMenu");
-
-menuBtn.onclick=function(){
-
-nav.classList.toggle("show");
-
+if (menuBtn && nav) {
+    menuBtn.addEventListener("click", function () {
+        nav.classList.toggle("show");
+    });
 }
 
-document.querySelectorAll(".copy-btn").forEach(button=>{
+// Copy Prompt
+document.querySelectorAll(".copy-btn").forEach(button => {
+    button.addEventListener("click", function () {
 
-button.addEventListener("click",function(){
+        const text = this.parentElement.querySelector("p").innerText;
 
-const text=this.parentElement.querySelector("p").innerText;
+        navigator.clipboard.writeText(text);
 
-navigator.clipboard.writeText(text);
+        this.innerHTML = "✅ Copied!";
 
-this.innerHTML="✅ Copied!";
+        setTimeout(() => {
+            this.innerHTML = "📋 Copy Prompt";
+        }, 2000);
 
-setTimeout(()=>{
-
-this.innerHTML="📋 Copy Prompt";
-
-},2000);
-
-});
-
+    });
 });
 
 // AI Tools Filter
-
 const filterButtons = document.querySelectorAll(".filter-btn");
 const toolCards = document.querySelectorAll(".directory-card");
 
 filterButtons.forEach(button => {
 
-button.addEventListener("click", () => {
+    button.addEventListener("click", () => {
 
-filterButtons.forEach(btn => btn.classList.remove("active"));
+        filterButtons.forEach(btn => btn.classList.remove("active"));
+        button.classList.add("active");
 
-button.classList.add("active");
+        const filter = button.dataset.filter;
 
-const filter = button.dataset.filter;
+        toolCards.forEach(card => {
 
-toolCards.forEach(card => {
+            if (filter === "all" || card.dataset.category === filter) {
+                card.style.display = "block";
+            } else {
+                card.style.display = "none";
+            }
 
-if(filter === "all" || card.dataset.category === filter){
+        });
 
-card.style.display = "block";
-
-}else{
-
-card.style.display = "none";
-
-}
-
-});
+    });
 
 });
-
-});
-
-
