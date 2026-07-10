@@ -799,13 +799,15 @@ nav{
 
 display:none;
 
-position:absolute;
+position:fixed;
 
-top:80px;
+top:70px;
 
 left:0;
 
 width:100%;
+
+height:calc(100vh - 70px);
 
 background:#101828;
 
@@ -814,6 +816,12 @@ flex-direction:column;
 padding:25px;
 
 gap:20px;
+
+overflow-y:auto;
+
+-webkit-overflow-scrolling:touch;
+
+z-index:9998;
 
 }
 
