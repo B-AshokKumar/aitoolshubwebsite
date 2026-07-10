@@ -20,9 +20,17 @@ const menuBtn = document.getElementById("menuBtn");
 const nav = document.getElementById("navMenu");
 
 if (menuBtn && nav) {
+
     menuBtn.addEventListener("click", function () {
         nav.classList.toggle("show");
     });
+
+    document.querySelectorAll("#navMenu a").forEach(link => {
+        link.addEventListener("click", function () {
+            nav.classList.remove("show");
+        });
+    });
+
 }
 
 // Copy Prompt
