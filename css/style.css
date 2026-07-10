@@ -1471,3 +1471,90 @@ font-size:32px;
     margin:0px auto 0;
     display:block;
 }
+
+/* ==========================
+   ABOUT US
+========================== */
+
+.about-section{
+    padding:90px 8%;
+}
+
+.about-container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.about-content{
+    text-align:center;
+}
+
+.about-content h3{
+    font-size:42px;
+    margin-bottom:25px;
+    color:#ffffff;
+}
+
+.about-content p{
+    font-size:18px;
+    line-height:1.9;
+    color:#d8d8d8;
+    max-width:900px;
+    margin:0 auto 25px;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    margin-top:50px;
+}
+
+.about-box{
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:22px;
+    padding:30px;
+    transition:.35s;
+}
+
+.about-box:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,212,255,.30);
+}
+
+.about-box h4{
+    color:#00d9ff;
+    margin-bottom:20px;
+    font-size:24px;
+}
+
+.about-box p{
+    font-size:17px;
+    line-height:1.8;
+    color:#d8d8d8;
+}
+
+.about-box ul{
+    list-style:none;
+    padding:0;
+}
+
+.about-box li{
+    margin-bottom:12px;
+    color:#ffffff;
+    font-size:17px;
+}
+
+@media(max-width:768px){
+
+.about-content h3{
+    font-size:32px;
+}
+
+.about-content p{
+    font-size:17px;
+}
+
+}
