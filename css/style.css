@@ -1435,6 +1435,22 @@ box-shadow:0 20px 50px rgba(0,212,255,.25);
 
 }
 
+.download-title-icon{
+    width:50px;
+    height:50px;
+    vertical-align:middle;
+    margin-right:12px;
+    border-radius:12px;
+}
+
+@media(max-width:768px){
+    .download-title-icon{
+        width:40px;
+        height:40px;
+        margin-right:10px;
+    }
+}
+
 @media(max-width:768px){
 
 .download-container{
@@ -1463,14 +1479,6 @@ font-size:32px;
    APP PREVIEW IMAGE
 ========================== */
 
-.app-preview{
-    width:100%;
-    max-width:700px;
-    border-radius:24px;
-    box-shadow:0 20px 40px rgba(0,0,0,.35);
-    margin:0px auto 0;
-    display:block;
-}
 
 /* ==========================
    ABOUT US
